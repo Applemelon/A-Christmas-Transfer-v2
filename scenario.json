@@ -1,0 +1,11 @@
+{
+    "description": "John and company are looking forward to christmas. But someone unexpectedly shows up to sour the eggnog for our protagonist.", 
+    "title": "A Christmas Transfer",
+    "tags": [
+        "Christmas"
+    ],
+    "label": "xmastransfer_start",
+    "prefix": "xmastransfer",
+    "version": "1.0",
+    "author": "Applemelon"
+}
