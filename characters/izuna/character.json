@@ -1,0 +1,11 @@
+{
+	"name_color": "#32a5dd",
+	"voice": "tomboy",
+	"eye_line": 0.04,
+	"scale": 0.9,
+	"poses": {
+		"b": {
+			"facing": "right"
+		}
+	}
+}

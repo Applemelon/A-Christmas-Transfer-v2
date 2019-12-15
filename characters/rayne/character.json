@@ -1,0 +1,12 @@
+
+{
+	"name_color": "#d5b586",
+	"scale": 0.86,
+	"voice": "woman",
+	"eye_line": 0.0,
+	"poses": {
+		"b": {
+			"facing": "right"
+		}
+	}
+}

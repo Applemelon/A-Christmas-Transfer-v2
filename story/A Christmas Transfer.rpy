@@ -1,9 +1,16 @@
-label xmastransfer_start:
-    image large_room = "xmastransfer_asset larger main room"
-    image harem1 = "xmastransfer_asset xmas harem 1"
-    define audio.lawrence1 = "xmastransfer_bgm_Merry_Christmas_Mr_Lawrence_1"
-    define audio.lawrence2 = "xmastransfer_bgm_Merry_Christmas_Mr_Lawrence_2"
+label xmasST_start:
+    define audio.lawrence1 = "xmasST_bgm_Merry_Christmas_Mr_Lawrence_1"
+    define audio.lawrence2 = "xmasST_bgm_Merry_Christmas_Mr_Lawrence_2"
 
+label xmasST_chapter_select:
+    menu:
+        "This scenario contains multiple chapters. They progress in chronological order. Finishing one chapter leads back to this choice. Which chapter would you like to start?"
+        "Chapter 1 - A Christmas Transfer (2018)":
+            jump xmasST_chapter_1
+        "Chapter 2 - The Bipolar Express (2019)":
+            jump xmasST_chapter_2
+
+label xmasST_chapter_1:
     pause 3
     play sound sfx_knock
     sandra "Get up, you sack of lazy beans!"
@@ -19,10 +26,10 @@ label xmastransfer_start:
     "This was the motivation and the reminder I needed to move my body up from the bed."
 
     outfit john casual
-    scene main room day
+    scene bg main room day
     show john a_0 at Position(pos=(0.80, 1.5), anchor=(0.5, 1.0)), faceleft
     with dissolve
-    play music xmastransfer_bgm_we_wish_you fadein 3
+    play music xmasST_bgm_we_wish_you fadein 3
     show john at Position(pos=(0.80, 1.0), anchor=(0.5, 1.0)) with ease
     "Well, you probably know me by now. In case you don't, I wonder what you're doing here."
 
@@ -41,7 +48,7 @@ label xmastransfer_start:
 
     john "Oh, shoot. Right. Sorry."
 
-    scene main house day
+    scene bg main house day
     outfit john uniform
     show john a_0 at center
     with wipecircle
@@ -100,9 +107,9 @@ label xmastransfer_start:
     stop music fadeout 1
     pause 0.75
 
-    play music xmastransfer_bgm_up_on_a_housetop
+    play music xmasST_bgm_up_on_a_housetop
     accessory kiyoshi set glasses
-    scene school entrance day
+    scene bg school entrance day
     show john a_0 at center
     show kiyoshi a_5 at offscreenright, faceleft
     with wipeleft
@@ -127,7 +134,7 @@ label xmastransfer_start:
     show kiyoshi a_5
     "He took another, albeit long, moment to catch his breath and finally felt a bit more focussed."
 
-    scene school hallway day
+    scene bg school hallway day
     show john a_0 at centerright, faceright
     show kiyoshi a_1 at center, faceright
     with wipeclock
@@ -178,7 +185,7 @@ label xmastransfer_start:
     show gabriel a_10
     pause 2
 
-    scene school classroom hallway day open
+    scene bg school classroom hallway day open
     show john a_0 at center, faceright
     show kiyoshi a_1 at centerleft, faceright
     show yui a_3 at centerright, faceleft
@@ -211,7 +218,7 @@ label xmastransfer_start:
     show yui a_1
     yui "Of course. And we are all really looking forward to spending christmas with yo-"
 
-    show yui a_9
+    show yui a_2
     show kiyoshi a_4
     yui "Wait, are you trying to distract me?"
 
@@ -246,7 +253,7 @@ label xmastransfer_start:
     show gabriel a_17
     pause 1.5
 
-    scene classroom 2
+    scene bg classroom 2
     with wiperadial_horiz
     "While we were getting to our seats, Kiyoshi whispered to me."
 
@@ -261,7 +268,7 @@ label xmastransfer_start:
     scene black with dissolve
     "Luckily for the viewer of this playthrough, they wouldn't have to endure the same monotone day as me."
 
-    scene school entrance day
+    scene bg school entrance day
     show john a_1 at center, faceright
     with diamonds
     pause 1
@@ -276,7 +283,7 @@ label xmastransfer_start:
     stop music fadeout 1.5
     pause 1
     show gabriel at centerleft with ease
-    play music xmastransfer_bgm_oh_holy_night
+    play music xmasST_bgm_oh_holy_night
     show john a_5
     "But before I could start getting home, someone stopped me just as I was about to leave the school premises."
 
@@ -316,8 +323,8 @@ label xmastransfer_start:
 
     "While trying to get that experience out of my mind, I continued home."
 
-    play music xmastransfer_bgm_angels_we_have_heard fadein 1
-    scene main livingroom day
+    play music xmasST_bgm_angels_we_have_heard fadein 1
+    scene bg main livingroom day
     show holly a_2 at Position(pos=(0.25, 1.2), anchor=(0.5, 1.0)), faceright
     with wipeblinds_vert
     show john a_0 at centerright, faceleft with dissolve
@@ -341,7 +348,7 @@ label xmastransfer_start:
     outfit yui casual
     outfit natsumi casual
     pause 1
-    scene main kitchen night
+    scene bg main kitchen night
     show sandra b_9 at Position(pos=(0.15, 1.0), anchor=(0.5, 1.0)), faceright
     show holly a_7 at Position(pos=(0.30, 1.0), anchor=(0.5, 1.0)), faceright
     show john a_0 at Position(pos=(0.43, 1.0), anchor=(0.5, 1.0)), faceright
@@ -361,7 +368,7 @@ label xmastransfer_start:
 
     "We just had a good time in general. Played some board games, ate loads of food and commented on those cheesy christmas movies that ran at this time of the day."
 
-    scene main room night
+    scene bg main room night
     show john a_0 at centerright, faceleft
     with sawright
     "When the time came to hit the hay, Holly housed an additional bed for Yui. Meanwhile, Yuuna and Natsumi would stay over in mom's room."
@@ -372,6 +379,8 @@ label xmastransfer_start:
 
     stop music fadeout 4
     scene black with HorizCenterTransition(2.0, True)
+    body izuna xmasST_izuna
+    body john xmasST_john
     outfit izuna uniform2
     outfit john noshirt
     pause 4
@@ -386,8 +395,8 @@ label xmastransfer_start:
 
     izuna "HEY!"
 
-    play music xmastransfer_bgm_silent_night fadein 1
-    scene main room dark
+    play music xmasST_bgm_silent_night fadein 1
+    scene bg main room dark
     show john a_4 at centerright, faceleft
     show izuna a_0 at centerleft, faceright
     with dissolve
@@ -516,23 +525,23 @@ label xmastransfer_start:
     stop music fadeout 3
     scene black with HorizCenterTransition(2.0, True)
     pause 2
-    $ rayne.name = "???"
+    $ xmasST_rayne.name = "???"
     "Once again I was awoken by someone moving me."
 
-    rayne "Hey, boy."
+    xmasST_rayne "Hey, boy."
 
-    rayne "Wake up."
+    xmasST_rayne "Wake up."
 
-    rayne "Wake up, boy."
+    xmasST_rayne "Wake up, boy."
 
     john "Hmmmm..."
 
-    outfit rayne dress
-    scene main room dark
+    outfit xmasST_rayne dress
+    scene bg main room dark
     show john a_2 at centerright, faceleft
-    show rayne c_1 at centerleft, faceright
+    show xmasST_rayne c_1 at centerleft, faceright
     with dissolve
-    play music xmastransfer_bgm_jingle_bells_calm fadein 2
+    play music xmasST_bgm_jingle_bells_calm fadein 2
     "It took a lot of energy to sit myself up in my bed again. My vision was as blurry as the last time someone woke me up."
 
     show john a_4
@@ -541,140 +550,141 @@ label xmastransfer_start:
     john "Wait, who is it now?"
 
     show john a_2
-    show rayne a_19
-    rayne "Aha. So you are alive after all!"
+    show xmasST_rayne a_19
+    xmasST_rayne "Aha. So you are alive after all!"
 
     "This time, some other girl was standing in my room. Someone I didn't know either."
 
-    $ rayne.name = "Rayne"
+    $ xmasST_rayne.name = "Rayne"
     john "Of course I'm alive. Who the hell are you? And how are you people getting into our home?"
 
-    show rayne b_7
-    rayne "I am the christmas spirit of moral compasses. Some call me Rayne. Not my real name, obviously, but that's all you need to know."
+    show xmasST_rayne b_7
+    xmasST_rayne "I am the christmas spirit of moral compasses. Some call me Rayne. Not my real name, obviously, but that's all you need to know."
 
     show john a_5
-    show rayne b_6
+    show xmasST_rayne b_6
     john "Rayne? Am I supposed to know you too?"
 
-    show rayne c_14
-    rayne "Haha! Nope! I have no idea who you are."
+    show xmasST_rayne c_14
+    xmasST_rayne "Haha! Nope! I have no idea who you are."
 
-    show rayne c_25
-    rayne "I was told you were the one who doesn't see the wonders of christmas time, you who is called John Davis."
+    show xmasST_rayne c_25
+    xmasST_rayne "I was told you were the one who doesn't see the wonders of christmas time, you who is called John Davis."
 
-    show rayne c_5
-    rayne "Can I call you John?"
+    show xmasST_rayne c_5
+    xmasST_rayne "Can I call you John?"
 
     john "Uhh... I would prefer it if you got out of my room to be honest."
 
-    show rayne a_24
-    rayne "John it is!"
+    show xmasST_rayne a_24
+    xmasST_rayne "John it is!"
 
     show john a_7
-    show rayne a_9
+    show xmasST_rayne a_9
     john "Look, I already told Rachel or whatever that other girl's name was earlier that I don't dislike christmas or anything. You guys are clearly in on the ploy together and targeting the wrong person."
 
-    show rayne b_13
+    show xmasST_rayne b_13
     show john a_16
-    rayne "Indeed, and she has told me."
+    xmasST_rayne "Indeed, and she has told me."
 
-    show rayne b_10
-    rayne "However, as a vegan I cannot overlook that you are feasting on poor ducklings for christmas!"
+    show xmasST_rayne b_10
+    xmasST_rayne "However, as a vegan I cannot overlook that you are feasting on poor ducklings for christmas!"
 
-    show rayne b_4
+    show xmasST_rayne b_4
     john "..."
 
     john "Are you serious?"
 
-    show rayne a_15
-    rayne "Dead serious!"
+    show xmasST_rayne a_15
+    xmasST_rayne "Dead serious!"
 
-    show rayne a_12:
+    show xmasST_rayne a_12:
         pause 1
         ease 1 xpos 0.5
         pause 1
         ease 1 xpos 0.3
-    rayne "You should take one of these. They will inform you of the cruelty that these ducks go through before being massacred!"
+    xmasST_rayne "You should take one of these. They will inform you of the cruelty that these ducks go through before being massacred!"
 
     show john a_19
     "She handed me a handwritten piece of paper that had some scribbles on it, saying {q}Ducks are for loving, not eating!{/q}."
 
     john "My mom buys her ducks from a friend who has an organic farm though..."
 
-    show rayne c_8
-    rayne "Is that so?"
+    show xmasST_rayne c_8
+    xmasST_rayne "Is that so?"
 
-    rayne "..."
+    xmasST_rayne "..."
 
-    show rayne c_9
-    rayne "I guess you are kind of excused then. It does not make up for the massive amount of suffering you inflict upon them, however!"
+    show xmasST_rayne c_9
+    xmasST_rayne "I guess you are kind of excused then. It does not make up for the massive amount of suffering you inflict upon them, however!"
 
     show john a_7
     john "Alright. Will you now please get out of our home before I call the police?"
 
     show john a_19
-    show rayne b_24 at faceleft
-    rayne "I will do my best!"
+    show xmasST_rayne b_24 at faceleft
+    xmasST_rayne "I will do my best!"
 
-    show rayne:
+    show xmasST_rayne:
         ease 2 xpos -0.3
-    rayne "Sleep well! Think about the future of ducks!"
+    xmasST_rayne "Sleep well! Think about the future of ducks!"
 
     john "Uh-huh..."
 
     "Unlike that other girl, she was out of my room in less than seconds."
 
-    scene main livingroom dark with wiperight
+    scene bg main livingroom dark with wiperight
     play sound sfx_door_close
     "I wanted to make sure she was actually leaving the house. I heard a door closing, but I went to check if she was actually gone and locked the door for good this time."
 
-    scene main room dark with wipeleft
+    scene bg main room dark with wipeleft
     "I could finally get some sleep. This really had deprived me of a lot of energy."
 
     "Only seconds passed before I dozed off again."
 
     stop music fadeout 4
     scene black with HorizCenterTransition(2.0, True)
-    $ kristoff.name = "???"
+    $ xmasST_kristoff.name = "???"
+    outfit xmasST_kristoff santa
     pause 3
-    kristoff "Ho-ho-ho! John! Wake up!"
+    xmasST_kristoff "Ho-ho-ho! John! Wake up!"
 
     think "Oh god, please no."
 
-    play music xmastransfer_bgm_all_i_want_for_christmas fadein 2
-    scene main room dark
-    show large_room:
+    play music xmasST_bgm_all_i_want_for_christmas fadein 2
+    scene bg main room dark
+    show xmasST_asset larger main room:
         xanchor 0.5
         xpos 0.43
     show john a_2 at centerright, faceleft
-    show kristoff b_7 at Position(pos=(0.40, 1.0), anchor=(0.5, 1.0)), faceright
+    show xmasST_kristoff b_7 at Position(pos=(0.40, 1.0), anchor=(0.5, 1.0)), faceright
     with dissolve
     "Once again, somebody was in my room."
 
     "Blurry vision as always, I got into a sitting position again."
 
-    show kristoff b_1
-    kristoff "Ho-ho-ho, there we go. You are finally awake!"
+    show xmasST_kristoff b_1
+    xmasST_kristoff "Ho-ho-ho, there we go. You are finally awake!"
 
     show john a_4
     john "Wh... What the hell is going on here?!"
 
-    $ kristoff.name = "Santa Claus"
-    "I saw some guy dressed as a Santa in fron of me. But most assuredly the weirdest thing  about this was..."
+    $ xmasST_kristoff.name = "Santa Claus"
+    "I saw some guy dressed as a Santa in front of me. But most assuredly the weirdest thing  about this was..."
 
-    show kristoff b_2
-    kristoff "Why the shocked look, young man? Have you never seen good old Santa before?"
+    show xmasST_kristoff b_2
+    xmasST_kristoff "Why the shocked look, young man? Have you never seen good old Santa before?"
 
     outfit izuna xmas
     john "Wh- What are..."
 
     show john:
         ease 0.75 xpos 0.85
-    show kristoff:
+    show xmasST_kristoff:
         ease 0.75 xpos 0.55
-    show large_room:
+    show xmasST_asset larger main room:
         ease 0.75 xpos 0.58
-    show harem1 at left behind kristoff:
+    show xmasST_asset xmas harem 1 at left behind kristoff:
         zoom 1.15
         ypos 1.15
         alpha 0.0
@@ -686,117 +696,117 @@ label xmastransfer_start:
         ease 0.5 alpha 1.0
     john "...they doing here?"
 
-    show kristoff at faceleft
+    show xmasST_kristoff at faceleft
     show john a_2
     "He turned his head backwards."
 
-    show kristoff b_9
-    kristoff "Hoh?"
+    show xmasST_kristoff b_9
+    xmasST_kristoff "Hoh?"
 
     "A lot of women were standing behind him in christmas clothing. Some with questionable exposure."
 
-    show kristoff b_7 at faceright
-    kristoff "Oh them. Do not mind them. They are simply my christmas harem."
+    show xmasST_kristoff b_7 at faceright
+    xmasST_kristoff "Oh them. Do not mind them. They are simply my christmas harem."
 
     show john a_19
     john "What the fuck is going on here?"
 
     show john a_4
-    show kristoff b_5
+    show xmasST_kristoff b_5
     show izuna a_1
     john "And you! Why are you here again?!"
 
-    show kristoff at faceleft
+    show xmasST_kristoff at faceleft
     show john a_19
     izuna "Huh? What?"
 
-    show kristoff at faceright
-    kristoff "Ho-hoh? You know each other?"
+    show xmasST_kristoff at faceright
+    xmasST_kristoff "Ho-hoh? You know each other?"
 
     john "Yes we do! Apparently we are going to the same school!"
 
     show izuna a_4
-    show kristoff at faceleft
+    show xmasST_kristoff at faceleft
     izuna "Oh, hey John. Nice seeing you again."
 
-    show kristoff at faceright
+    show xmasST_kristoff at faceright
     john "Didn't I already tell you that I have nothing against christmas?"
 
-    kristoff "You don't?"
+    xmasST_kristoff "You don't?"
 
-    show kristoff at faceleft
+    show xmasST_kristoff at faceleft
     show izuna a_5
     izuna "You don't? Oh right, you don't."
 
     show izuna a_4
     izuna "My bad. Santa, he is fine with you after all. Sorry, forgot to tell you."
 
-    show kristoff at faceright
+    show xmasST_kristoff at faceright
     show john a_4
     show izuna a_1
     john "Again, why are you here?"
 
     show izuna a_4
     show john a_19
-    show kristoff at faceleft
+    show xmasST_kristoff at faceleft
     izuna "I'm a part of Santa's harem. Isn't that obvious?"
 
-    show kristoff at faceright
+    show xmasST_kristoff at faceright
     john "...Y- Yeah, but why?"
 
     show izuna a_9
-    show kristoff at faceleft
+    show xmasST_kristoff at faceleft
     izuna "Cause Santa is hot."
 
-    show kristoff b_1 at faceright
+    show xmasST_kristoff b_1 at faceright
     show izuna a_6
-    kristoff "So you do believe in me after all?"
+    xmasST_kristoff "So you do believe in me after all?"
 
     show john a_2
     john "Believe in you?"
 
     john "You're saying you're the actual Santa Claus?"
 
-    kristoff "Do I not look the part, young man?"
+    xmasST_kristoff "Do I not look the part, young man?"
 
     show john a_19
     john "Just because you dress like him doesn't mean you are the real Santa, for your information."
 
-    kristoff "Ah, yes. Most say the exact same thing."
+    xmasST_kristoff "Ah, yes. Most say the exact same thing."
 
     show john a_2
-    kristoff "My existence is a conundrumous one. Many wonder who or what I truly am."
+    xmasST_kristoff "My existence is a conundrumous one. Many wonder who or what I truly am."
 
-    kristoff "Few know that I in truth am a genetically engineered super-human, created by the government to reward those who follow this system."
+    xmasST_kristoff "Few know that I in truth am a genetically engineered super-human, created by the government to reward those who follow this system."
 
     show john a_16
     think "Are you for real...?"
 
-    kristoff "And although your tardiness is aplenty, I still do not see any truly naughty deeds on your list, young man!"
+    xmasST_kristoff "And although your tardiness is aplenty, I still do not see any truly naughty deeds on your list, young man!"
 
-    kristoff "Astonishing. Truly astonishing!"
+    xmasST_kristoff "Astonishing. Truly astonishing!"
 
-    show kristoff b_3
+    show xmasST_kristoff b_3
     show john a_2
-    kristoff "Wait, why were we paying you a visit again?"
+    xmasST_kristoff "Wait, why were we paying you a visit again?"
 
     john "...I don't know?"
 
-    show kristoff at faceleft
-    kristoff "Any of you?"
+    show xmasST_kristoff at faceleft
+    xmasST_kristoff "Any of you?"
 
     "He turned back to face his {q}harem{/q} again. All of them shook their head not knowing."
 
-    show kristoff b_1 at faceright
-    kristoff "Ho-ho, I apologize for waking you up in the middle of the night. I have finished my deliveries to all the nice children around the world, so as you might guess, I will be having some good days off now with the ladies."
+    show xmasST_kristoff b_1 at faceright
+    xmasST_kristoff "Ho-ho, I apologize for waking you up in the middle of the night. I have finished my deliveries to all the nice children around the world, so as you might guess, I will be having some good days off now with the ladies."
 
-    show kristoff b_7
-    kristoff "That being said, an apology is warranted to you, and apologies are best offered as a gift! What do you say? Would you like to be a part of my wonderful harem?"
+    show xmasST_kristoff b_7
+    xmasST_kristoff "That being said, an apology is warranted to you, and apologies are best offered as a gift! What do you say? Would you like to be a part of my wonderful harem?"
 
     show john a_15
     john "...What...?"
 
-    kristoff "It will be fun! What do you say?"
+    xmasST_kristoff "It will be fun! What do you say?"
 
     think "Is this guy nuts?"
 
@@ -805,15 +815,15 @@ label xmastransfer_start:
 
     john "Just so you know, there are other people in this house. So scram before I wake them up."
 
-    kristoff "Ho-ho-ho, no need to worry young man. Just let Santa do his thing."
+    xmasST_kristoff "Ho-ho-ho, no need to worry young man. Just let Santa do his thing."
 
     "The guy continued to laugh in this manner. But all of a sudden, he snapped his fingers."
 
     stop music fadeout 1
     show john a_4
-    morph begin magic john willow xmas a_1
+    morph begin magic john xmasST_willow xmas a_1
     accessory john set xmashat
-    play music xmastransfer_bgm_sad_silent_night fadein 2
+    play music xmasST_bgm_sad_silent_night fadein 2
     "And in that moment, I instantaneously felt some sort of weird thing going on with me."
 
     morph do john
@@ -828,8 +838,8 @@ label xmastransfer_start:
     show john b_12
     john "Is that me talking?"
 
-    show kristoff b_1
-    kristoff "Ho ho, young lady, you look wonderful."
+    show xmasST_kristoff b_1
+    xmasST_kristoff "Ho ho, young lady, you look wonderful."
 
     show john b_0
     john "Please tell me this isn't happening..."
@@ -838,7 +848,7 @@ label xmastransfer_start:
     john "Did you just turn me into a girl, you old freak?!"
 
     show john a_5
-    kristoff "Why, yes. That is what you wanted was it not?"
+    xmasST_kristoff "Why, yes. That is what you wanted was it not?"
 
     show john a_1
     john "No! I was being sarcastic! Do you want me to spell it out for you?!"
@@ -847,14 +857,14 @@ label xmastransfer_start:
     john "Now turn me back!"
 
     show john a_5
-    show kristoff b_0
-    kristoff "I'm afraid it's one wish a year for all the good kids. If you wish for something, you should be more clear, young girl."
+    show xmasST_kristoff b_0
+    xmasST_kristoff "I'm afraid it's one wish a year for all the good kids. If you wish for something, you should be more clear, young girl."
 
     show john a_6
     john "Don't call me a girl!"
 
     show john a_5
-    kristoff "So you don't want to ride with Santa in his sleigh? All the other girls can only recommend it."
+    xmasST_kristoff "So you don't want to ride with Santa in his sleigh? All the other girls can only recommend it."
 
     izuna "I sure can."
 
@@ -862,16 +872,16 @@ label xmastransfer_start:
     john "No, I don't want to ride with you in your stupid pimp sleigh. Just turn me back already!"
 
     show john a_13
-    kristoff "You can wish for that next year. However, Santa really needs to return home to the northpole right now. Or was it the southpole...?"
+    xmasST_kristoff "You can wish for that next year. However, Santa really needs to return home to the northpole right now. Or was it the southpole...?"
 
-    kristoff "Anyhow, toodles."
+    xmasST_kristoff "Anyhow, toodles."
 
     show john a_17
-    show kristoff:
+    show xmasST_kristoff:
         ease 4 alpha 0.0
     show izuna:
         ease 4 alpha 0.0
-    show harem1:
+    show xmasST_asset xmas harem 1:
         ease 4 alpha 0.0
     "With a snap of his fingers they all disappeared."
 
@@ -895,7 +905,7 @@ label xmastransfer_start:
     show john a_11
     "Instead of my usual self, I saw a girl I had never seen before, imitating my movements as if they were my own. Because they were."
 
-    scene main livingroom day
+    scene bg main livingroom day
     outfit john homeworn
     accessory john set
     outfit sandra pajamas
@@ -928,8 +938,8 @@ label xmastransfer_start:
     scene black with Dissolve(1.0)
     title "Later"
 
-    play music "<loop 61.0>" + xmastransfer_bgm_mr_lawrence
-    scene lunch
+    play music "<loop 61.0>" + xmasST_bgm_mr_lawrence
+    scene bg lunch
     show john b_7 at center:
     with wipecircle
     "It was the first day of school after the holidays, and I was regarded as an entirely new student to take John's place who had left for another."
@@ -1038,7 +1048,7 @@ label xmastransfer_start:
     scene black with dissolve
     "Christmas this year had taken a weird turn. But in the end, few things really changed."
 
-    scene classroom 2
+    scene bg classroom 2
     show john b_11 at centerleft, faceright:
         ypos 1.15
     show jack a_1 at right, faceleft
@@ -1050,5 +1060,34 @@ label xmastransfer_start:
     show john b_1
     "If I even wanted to."
 
-    gameover "Merry Christmas!"
+    gameover "Merry Christmas v1!"
+
+    jump xmasST_chapter_select
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return
