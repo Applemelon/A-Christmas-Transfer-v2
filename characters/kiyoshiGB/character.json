@@ -1,0 +1,12 @@
+{
+	"name_color": "#726b94",
+	"scale": 1.075,
+	"poses": {
+		"a": {
+			"facing": "right"
+		},
+		"c": {
+			"facing": "right"
+		}
+	}
+}

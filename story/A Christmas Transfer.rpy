@@ -3,15 +3,24 @@ label xmasST_start:
     define audio.lawrence2 = "xmasST_bgm_Merry_Christmas_Mr_Lawrence_2"
 
 label xmasST_chapter_select:
+    scene black
+    show xmasST_asset deco
+    with dissolve
+
+    play music xmasST_bgm_jingle_bells_calm
     menu:
         "This scenario contains multiple chapters. They progress in chronological order. Finishing one chapter leads back to this choice. Which chapter would you like to start?"
         "Chapter 1 - A Christmas Transfer (2018)":
+            hide xmasST_asset deco with dissolve
             jump xmasST_chapter_1
         "Chapter 2 - The Bipolar Express (2019)":
+            hide xmasST_asset deco with dissolve
             jump xmasST_chapter_2
 
 label xmasST_chapter_1:
-    pause 3
+    stop music fadeout 2
+    resetstate
+    pause 4
     play sound sfx_knock
     sandra "Get up, you sack of lazy beans!"
 
@@ -1064,30 +1073,468 @@ label xmasST_chapter_1:
 
     jump xmasST_chapter_select
 
+label xmasST_chapter_2:
+    stop music fadeout 2
+    resetstate
+    pause 4
+    body john xmasST_willow
+    body kiyoshi kiyoshiGB
+    outfit john casual
+    accessory john set xmashat
+    accessory kiyoshi set glasses
+    play music xmasST_bgm_angels_we_have_heard fadein 1.5
+    show john b_6 at center with dissolve
+    john "{i}Sigh...{/i}"
+
+    show john b_9
+    "It's been a year now since the incident of last christmas happened."
+    "As one might assume, I was stuck like this for the entire duration."
+    "We graduated high-school, even I under current conditions."
+    "But instead of having the name {q}John{/q} in my exam, it now said {q}Willow{/q}."
+
+    outfit xmasST_kristoff santa
+    $ xmasST_kristoff.name = "Santa"
+    show john b_4
+    show xmasST_kristoff b_1 at centerright:
+        alpha 0.0
+    "One might think that something like {q}Jane{/q} would fit better as my supposed girl name, but my mom said it was too obvious a name."
+
+    body kiyoshi xmasST_kiyoshiGB
+    outfit kiyoshi casual_b
+    show john b_11:
+        ease 0.75 xpos 0.25
+    pause 0.5
+    show xmasST_kristoff:
+        ease 0.5 alpha 1.0
+    "That aside, I at least wanted to meet that old guy again who did this to me."
+
+    show kiyoshi b_10 behind john:
+        center
+        xpos 0.4
+    with dissolve
+    "And I wasn't alone on this. Kiyoshi wanted too."
+    "If not because of what the guy did to him, then out of pure curiosity."
+    "After all, I wasn't the only one who was visited by this jerk."
+    "Our goal was simple. While we ended up not really having anything against being the opposite gender, since few things really change, being able to change back at will would be the best compromise."
+
+    accessory john set
+    outfit katrina casual
+    scene bg katrina livingroom night
+    show john b_4:
+        center
+        faceleft
+        xpos 0.65
+    show kiyoshi a_10:
+        center
+        faceleft
+        xpos 0.8
+    show katrina a_4 at centerleft, faceright
+    with dissolve
+    "So even if we had to suffer through countless hours of Kat forcing us to do the act of being girls..."
+
+    show katrina a_12
+    katrina "Let me see your girl face."
+
+    show john b_17
+    show katrina a_4
+    john "...Our what?"
+
+    show katrina a_12
+    show john b_8
+    show kiyoshi a_7
+    katrina "You got a girl face?"
+
+    show katrina b_1
+    katrina "UwU!"
+
+    show katrina a_12
+    katrina "That's a girl face. Now let me see your girl face."
+
+    show katrina a_4
+    show john a_7
+    john "Uh... u... wu?"
+
+    show kiyoshi b_13
+    katrina "Bullshit, you didn't convince me."
+
+    show katrina a_12
+    katrina "Now let me see your real girl face!"
+
+    show katrina a_4
+    show john a_12
+    john "Oh for god's sake-"
+
+    show john a_19
+    show kiyoshi b_15:
+        ease 0.25 xpos 0.85
+    john "UwU!"
+
+    show john a_6
+    show katrina a_1
+    john "Happy?!"
+    "Yeah, she was way too hung up on terrible references to take her seriously."
+
+    outfit kiyoshi casual
+    accessory kiyoshi set glasses, xmashat
+    outfit john xmas
+    accessory john set xmashat
+    outfit yui casual
+    outfit sandra casual
+    outfit natsumi casual_b
+    scene bg main livingroom night
+    show john b_2 at centerright, faceleft
+    show kiyoshi b_11 at right, faceleft
+    show yui a_13 at centerleft, faceright
+    show sandra b_1 at center, faceright
+    show yuuna a_1 at left, faceright
+    show natsumi a_2:
+        center
+        faceright
+        xpos 0.2
+        ypos 1.075
+    with wipeleft
+    "Eventually, the 24th rolled around again."
+    "I managed to bring Kiyoshi for this year's christmas, even if Natsumi and Yuuna had no idea who this was."
+
+    show yui a_11
+    yui "Isn't it a bit much with those christmas clothes...?"
+    john "Might as well use it now that I have it."
+
+    outfit john homeworn
+    outfit kiyoshi underwear
+    accessory john set
+    accessory kiyoshi set
+    play music xmasST_bgm_silent_night fadeout 1.5
+    scene bg main room night
+    show john b_4 at centerright, faceleft
+    show kiyoshi b_1 at center, faceright
+    with wipecircle
+    "Well, he was here because he had a plan."
+    "He knew that I especially wanted to meet this Santa look-alike again, so he proposed simply waiting for him during this night."
+    kiyoshi "W-girl, don't worry about it. He showed up last year, right?"
+
+    show john b_7
+    show kiyoshi b_3
+    john "Well, yeah, it's just... You know, we don't have guarantees that he's gonna come this christmas again."
+
+    show kiyoshi b_6
+    kiyoshi "He knows you have another wish. No Santa in this world would refuse giving one to someone who has done nothing bad this entire year."
+
+    show kiyoshi b_7
+    kiyoshi "You haven't done anything bad this year, right?"
+
+    show john a_7
+    john "Of course not. I'm not some scumbag."
+
+    show john b_2
+    john "I guess you're right. I'm worrying too much."
+
+    show kiyoshi b_3
+    kiyoshi "See? Now let's wish for a spaceship for real this time."
+
+    show john b_10
+    think "He is still set on getting that spaceship...?"
+
+    scene black with Dissolve(2.0)
+    john "Good night. Wake me up if you hear anyone."
+    kiyoshi "You can count on me."
+
+    stop music fadeout 2
+    pause 5
+    scene bg main room day
+    show john a_0:
+        centerright
+        faceright
+        ypos 2.0
+    show kiyoshi c_25:
+        center
+        faceright
+        ypos 2.0
+    with dissolve
+    pause 1.5
+    play sound xmasST_sfx_rooster
+    pause 2
+    show john:
+        ease 1.5 ypos 1.5
+    pause 2
+    $ gui.textbox_yalign = 0.03
+    john "Huh...?"
+
+    show john b_6
+    john "...Wait, is it already...?"
+
+    pause 1.5
+    play music xmasST_bgm_we_wish_you
+    show john b_12:
+        faceleft
+        ease 0.25 ypos 1.2
+    with hpunch
+    $ gui.textbox_yalign = 1.0
+    john "Oh god, it's morning!"
+    john "Kiyoshi! Wake up!"
+
+    show kiyoshi:
+        ease 2.5 ypos 1.35
+    kiyoshi "...Hunh...?"
+    john "Dude, get up!"
+
+    show kiyoshi c_16
+    kiyoshi "{i}Yaawn...{/i}"
+
+    show john b_15
+    show kiyoshi b_17
+    kiyoshi "What's going o-"
+
+    show kiyoshi b_8:
+        faceleft
+        ease 0.25 ypos 1.1
+    with hpunch
+    kiyoshi "Ah! It's morning!"
+    john "Of course it is! He didn't come after all!"
+
+    show kiyoshi b_8
+    kiyoshi "Uh- Uhh... Alright, so maybe-"
+
+    show kiyoshi b_15 at faceright
+    kiyoshi "Maybe he is having a nice morning coffee with your mom!"
+    john "He isn't coming, you idiot."
+    kiyoshi "Then maybe! Maybe we can just... Ask someone where he is!"
+
+    show john a_6
+    john "If it were that simple then we would have done that a long time ago-"
+
+    show john b_12
+    show kiyoshi b_0
+    john "Oh shit, we should have done that a long time ago!"
+
+    outfit john coat
+    outfit kiyoshi casual
+    accessory kiyoshi set glasses
+    scene bg shrine day
+    show john b_3 at center, faceright
+    show kiyoshi b_3 at centerleft, faceright
+    with wipeclock
+    "With that, we set off for Setsuna's after celebrating christmas day at home. Even if my memories were a bit foggy from last christmas night, I still remembered one name in particular."
+    "Setsuna sometimes talked about a friend of hers called Izuna, who apparently went to the same school as us. So if we could find her, I bet we could find this Santa guy."
+
+    show john b_7 at faceleft
+    john "You know, I've been wondering..."
+
+    show kiyoshi b_0
+    kiyoshi "Hm?"
+    john "Aren't you cold in those clothes?"
+
+    show kiyoshi b_7
+    kiyoshi "I don't have warmer clothes than this."
+
+    show john b_4 at faceright
+    john "Oh. Right. Sorry."
+
+    scene bg shrine interior day
+    show john b_1:
+        centerleft
+        faceright
+        alpha 0.0
+        pause 1.0
+        ease 0.5 alpha 1.0
+    show kiyoshi b_3:
+        left
+        faceright
+        alpha 0.0
+        pause 1.5
+        ease 0.5 alpha 1.0
+    show setsuna a_9:
+        right
+        faceright
+        ypos 1.15
+        transform_anchor True
+        rotate -60
+    with diamonds
+    "And we did arrive, but..."
+
+    show kiyoshi b_7
+    show john b_17
+    setsuna "ZZzzzz..."
+
+    show john b_6 at faceleft
+    john "Uh... Maybe we should just come back later?"
+
+    show nemuri a_3:
+        offscreenright
+        faceleft
+        ease 0.75 right
+    show john b_4 at faceright
+    show kiyoshi a_11
+    nemuri "Is someone here?"
+
+    show nemuri a_0
+    nemuri "Ah, visitors. Can I help you?"
+    john "Actually, we just wanted to talk to Setsuna here, but we'll come back later when she isn't... Sleeping at 2 o'clock in the livingroom...?"
+    nemuri "Please excuse her, she decided to stay up way too late yesterday..."
+
+    show nemuri a_1:
+        ease 0.15 xpos 0.8
+        pause 0.1
+        ease 0.2 xpos 0.85
+    show setsuna a_8
+    show kiyoshi b_2
+    show john b_8
+    with hpunch
+    nemuri "Dear, you have visitors!"
+    "He slapped her right on her head with a stick he was carrying."
+
+    show setsuna:
+        parallel:
+            faceleft
+            pause 0.25
+            faceright
+            pause 0.25
+            faceleft
+            pause 0.25
+            faceright
+        parallel:
+            ease 0.75 ypos 1.0 xpos 0.65 rotate 0
+    setsuna "Wha- What?!"
+
+    show nemuri at offscreenright, faceright with ease
+    nemuri "Tend to your guests, would you?"
+
+    show setsuna a_7 at faceleft
+    pause 1.5
+    setsuna "Oh!"
+
+    show kiyoshi b_11
+    setsuna "Jo- I mean, Willow! And... You!"
+
+    show setsuna a_6
+    setsuna "I'm sorry, have we met before?"
+    john "Oh, you see..."
+
+    play music xmasST_bgm_holiday_weasel fadeout 2.5
+    scene black with wipeblinds_horiz
+    pause 0.5
+    outfit john casual
+    scene bg shrine interior dusk
+    show setsuna b_0:
+        right
+        faceleft
+        ypos 1.15
+    show john b_1:
+        centerright
+        faceright
+        ypos 1.15
+        xpos 0.575
+    show kiyoshi b_5:
+        center
+        faceright
+        ypos 1.15
+        xpos 0.45
+    with wipeblinds_horiz
+    setsuna "I see."
+    setsuna "So Izuna was much more than I thought."
+
+    show setsuna b_3
+    setsuna "I expected her to be out of the ordinary, but to be a part of... Santa's harem...?"
+    setsuna "Why do I even believe you? That sounds so stupid."
+
+    show john b_4
+    john "Don't look at me, I think it's a ridiculous thought too."
+
+    show setsuna a_2
+    setsuna "I'll give her a call and ask her if she can help you guys out. Give me one sec."
+
+    show setsuna a_1
+    show john b_1
+    "She took out her phone that she kept in her miko dress and dialed a number."
+
+    play sound xmasST_sfx_dialing
+    show setsuna b_2
+    setsuna "Heh, it can take a little while, she's really bad at picking up her phone."
+
+    play sound xmasST_sfx_pick_up
+    show setsuna b_0
+    "But we did eventually reach her after a few seconds."
+    izuna "Hello?"
+
+    show setsuna b_1
+    setsuna "Hey Izuna. It's Setsuna."
+    izuna "Oh, hey! How's my favorite girl?"
+    setsuna "I'm great, thank you. I've got two people here who would like to talk to you, something about wanting to meet with Santa or something..."
+    izuna "R- Really?!"
+    izuna "Are they at your place right now?!"
+
+    show setsuna b_0
+    show kiyoshi b_17
+    setsuna "Uh, yeah."
+
+    show john b_11
+    izuna "Give me ten seconds!"
+
+    play sound xmasST_sfx_hang_up
+    show setsuna b_6
+    "And with that, she hung up."
+    john "...Uh?"
+    setsuna "...That's odd."
+
+    stop music fadeout 3
+    play sound xmasST_sfx_airplane
+    show john b_10
+    show kiyoshi b_2
+    show setsuna a_7
+    "Not long after though, we heard a really loud noise right outside."
+
+    show john b_16
+    show kiyoshi b_16
+    john "What the hell is that?!"
+
+    play sound xmasST_sfx_crash
+    "The sound was promptly abrupted with an extremely noisy crashing sound."
+
+    show kiyoshi b_15 at faceleft behind john
+    show john b_8 at faceleft
+    show setsuna b_8
+    setsuna "Did someone just crash outside?"
+
+    scene bg shrine dusk
+    body izuna xmasST_izuna
+    outfit izuna xmas
+    show xmasST_asset crashed plane:
+        center
+        xpos 0.1
+        ypos 1.5
+        faceleft
+        zoom 1.5
+    show izuna a_6 at left
+    show john b_0:
+        faceleft
+        center
+        xpos 0.6
+        alpha 0.0
+        pause 0.75
+        ease 0.5 alpha 1.0
+    show kiyoshi a_15:
+        faceleft
+        center
+        xpos 0.75
+        alpha 0.0
+        pause 0.9
+        ease 0.5 alpha 1.0
+    show setsuna a_8:
+        faceleft
+        center
+        xpos 0.9
+        alpha 0.0
+        pause 1.05
+        ease 0.5 alpha 1.0
+    with sawleft
+    izuna "Whew, that was a close one."
+
+    
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    placeholder
     return
