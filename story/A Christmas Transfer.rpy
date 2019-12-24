@@ -8,6 +8,7 @@ label xmasST_chapter_select:
     with dissolve
 
     play music xmasST_bgm_jingle_bells_calm
+    $ gui.textbox_yalign = 1.0
     menu:
         "This scenario contains multiple chapters. They progress in chronological order. Finishing one chapter leads back to this choice. Which chapter would you like to start?"
         "Chapter 1 - A Christmas Transfer (2018)":
@@ -1193,11 +1194,14 @@ label xmasST_chapter_2:
         xpos 0.2
         ypos 1.075
     with wipeleft
-    "Eventually, the 24th rolled around again."
+    "Eventually, the 24th of December rolled around again."
     "I managed to bring Kiyoshi for this year's christmas, even if Natsumi and Yuuna had no idea who this was."
 
     show yui a_11
+    show john b_4
     yui "Isn't it a bit much with those christmas clothes...?"
+
+    show john b_1
     john "Might as well use it now that I have it."
 
     outfit john homeworn
@@ -1314,7 +1318,7 @@ label xmasST_chapter_2:
     show john b_3 at center, faceright
     show kiyoshi b_3 at centerleft, faceright
     with wipeclock
-    "With that, we set off for Setsuna's after celebrating christmas day at home. Even if my memories were a bit foggy from last christmas night, I still remembered one name in particular."
+    "With that, we set off for Setsuna's after celebrating christmas day at home. Even if my memories were a bit foggy from last year's christmas night, I still remembered one name in particular."
     "Setsuna sometimes talked about a friend of hers called Izuna, who apparently went to the same school as us. So if we could find her, I bet we could find this Santa guy."
 
     show john b_7 at faceleft
@@ -1380,6 +1384,7 @@ label xmasST_chapter_2:
     show kiyoshi b_2
     show john b_8
     with hpunch
+    play sound sfx_whack
     nemuri "Dear, you have visitors!"
     "He slapped her right on her head with a stick he was carrying."
 
@@ -1529,12 +1534,1359 @@ label xmasST_chapter_2:
     with sawleft
     izuna "Whew, that was a close one."
 
-    
+    show izuna a_4:
+        pause 1
+        ease 0.5 xpos 0.4
+    izuna "Oh! Hey Setsuna, thanks for telling me!"
+    kiyoshi "What the-"
+    kiyoshi "Is that a plane?"
+
+    play music xmasST_bgm_dvorak_polka fadein 1
+    scene bg shrine interior dusk
+    show izuna a_6:
+        centerleft
+        faceright
+        ypos 1.15
+    show kiyoshi b_5:
+        center
+        faceleft
+        ypos 1.15
+    show john b_1:
+        centerright
+        faceleft
+        ypos 1.15
+    show setsuna b_0:
+        right
+        faceleft
+        ypos 1.15
+    with cubeclouds
+    "We explained what we wanted to her, and she was cheerfully listening to every bit of it."
+
+    show john b_7
+    "If I had to know better, I'd even think she was enjoying herself a bit {i}too{/i} much listening to our request."
+    "As if she hadn't talked with anyone in years."
+
+    show izuna a_9
+    izuna "Okay, got it."
+
+    show izuna a_7
+    izuna "But aw man, I can't believe that you are that Kiyoshi guy though."
+    izuna "Santa really did a good job on you. You look way cuter now."
+
+    show kiyoshi a_1
+    kiyoshi "I wholeheartedly agree. His request of joining his harem is something I could not accept though, unfortunately."
+
+    show kiyoshi b_18
+    kiyoshi "After all, what I strive for is a harem of my own."
+
+    show kiyoshi b_0 at faceright
+    john "You want a harem of guys around you now?"
+
+    show kiyoshi a_23
+    kiyoshi "Obviously not. Girls are still my interest, after all."
+
+    show john b_2
+    john "Pff, good luck finding such a large amount of lesbians."
+
+    show john b_7 at faceright
+    setsuna "Could you guys not talk about those sorts of topics while in the shrine, please?"
+    john "Sorry."
+
+    show john at faceleft
+    show kiyoshi a_0 at faceleft
+    izuna "Anywho, I just crashed the plane that Santa gave me this year, so I can't really give you a lift in that one..."
+
+    show izuna a_5
+    izuna "Boy was it hard to control..."
+
+    show izuna a_0
+    show john b_17
+    john "He gave you a freaking airpla- Argh, whatever."
+
+    show john b_7
+    john "Does the guy really live at the north pole?"
+
+    show izuna a_4
+    izuna "He sure does. And I think I know another way to get there!"
+    izuna "But we have to leave today still, it's the last chance at going there."
+    john "Yes please."
+
+    scene bg main livingroom night
+    show john b_2 at center, faceleft
+    show kiyoshi b_3 at centerright, faceleft
+    show izuna a_7 at right, faceleft
+    show sandra b_4 at centerleft, faceright
+    show holly b_8 at left, faceright
+    with sawleft
+    "We went home to quickly notify our parents about our absence."
+
+    scene bg kiyoshi livingroom night
+    show kiyoshi b_14 at center, faceright
+    show john b_9 at centerleft, faceright
+    show izuna a_5 at left, faceright
+    show maurice a_3 at centerright, faceleft
+    with sawright
+    "Or in Kiyoshi's case, his guardian."
+
+    play music xmasST_bgm_oh_christmas_tree fadein 1.5 fadeout 1
+    scene xmasST_bg trainstation 1
+    show izuna a_8 at centerleft, faceleft
+    show john b_4 at center, faceleft
+    show kiyoshi b_11 at centerright, faceleft
+    with wiperadial_horiz
+    "Eventually, she led us to the trainstation of the city."
+
+    show izuna a_1 at faceright
+    izuna "Huff... Guys, you need to hurry, I think we could be late!"
+
+    show izuna a_7
+    john "Are we just taking a train?"
+    john "Surely it can't be that easy."
+    izuna "Of course we are."
+    kiyoshi "I didn't expect for us to pay for a train ticket, I barely have enough money saved up for myself."
+    john "Yes, that too."
+
+    show izuna a_5
+    izuna "Urgh, you guys, don't you think I have everything planned?"
+    john "No."
+    kiyoshi "Definitely not."
+
+    show izuna a_9
+    izuna "Well, prepare to be amazed then."
+
+    show izuna a_6 at faceleft
+    "She turned around and started looking at the walls in front of us."
+
+    show izuna:
+        ease 0.5 left
+    "She then started walking towards it, looking at various sections of the wall conspicuously."
+
+    show izuna a_4:
+        ease 0.75 xpos 0.2
+    "Then, as if readying up for a run, she got into position..."
+
+    show izuna:
+        ease 0.25 xpos 0.05
+    pause 0.2
+    play sound sfx_whack
+    show izuna a_7 at anim_fall_over_right with hpunch
+    izuna "Ow!"
+
+    hide izuna
+    show john b_17
+    show kiyoshi b_17
+    john "Uh..."
+
+    show izuna a_5 at left, faceright with easeinbottom
+    izuna "That was a fluke!"
+    izuna "I always get them mixed! It's over here instead!"
+
+    show john b_7
+    show izuna a_8 at faceleft
+    "Preparing for yet another run at the wall, she now aimed for another spot."
+
+    show izuna:
+        ease 0.5 offscreenleft
+    play sound xmasST_sfx_enter
+    show kiyoshi b_2
+    show john b_12
+    "And sure enough, she went right through."
+    kiyoshi "Wha- A cloaking device?!"
+    kiyoshi "Those exist on earth?!"
+
+    show izuna a_4:
+        transform_anchor True
+        faceright
+        xpos -0.3
+        ypos 1.1
+        rotate 20
+        ease 0.5 xpos 0.15
+    izuna "You coming or what?"
+    john "Uh- Yeah, sure..."
+
+    scene xmasST_bg trainstation 2
+    show izuna a_10:
+        center
+        faceright
+    show john b_10:
+        right
+        faceleft
+        xpos 0.9
+        pause 0.5
+        ease 0.5 xpos 0.7
+    show kiyoshi b_0:
+        right
+        faceleft
+        xpos 1.1
+        pause 0.75
+        ease 0.5 xpos 0.85
+    with wipeclock
+    "As if entering a completely different world, we were now suddenly outside again."
+    "Now, a very traditional looking train with low resolution was waiting for us."
+
+    show izuna a_6
+    john "So that's the train we'll be taking?"
+    izuna "Yep."
+
+    show xmasST_misha a_5 at left, faceright with dissolve
+    show izuna a_7
+    xmasST_misha "Ey! You there. Are little girls taking train to pole tonight?"
+
+    show izuna at faceleft
+    show xmasST_misha a_7
+    izuna "Oh, Miss Conductor. Yes, we're getting on!"
+    xmasST_misha "...Santa girl, you taking little girls to pole tonight? Sure about it?"
+
+    show izuna a_9
+    izuna "Of course. I know what I'm doing."
+
+    show izuna a_6
+    xmasST_misha "...Very well. Go on board."
+
+    show xmasST_misha a_3
+    xmasST_misha "Welcome to Bipolar Express. We leave now."
+
+    scene black with wipedown
+    pause 0.5
+    scene xmasST_bg wagon 2
+    show izuna a_6 at centerright, faceright
+    show xmasST_misha a_7 at right, faceleft
+    show john b_7 at center, faceright
+    show kiyoshi b_11 at centerleft, faceright
+    with wipeup
+    xmasST_misha "I am Misha. Conductor. I am from Russia, so use Russia accent for me."
+    xmasST_misha "There are not many people going to pole tonight. It is day after christmas, not big surprise."
+    xmasST_misha "There is no smoking, loitering or eating in my train. Else I will throw you off to wolves. Kapiche?"
+
+    show john b_17
+    john "Uh, yeah."
+
+    show john b_7
+    xmasST_misha "Enjoy trip. I will start train. Goodbye."
+
+    show xmasST_misha at offscreenright, faceright with ease
+    pause 0.75
+    show izuna at faceleft
+    izuna "Isn't she just great?"
+    kiyoshi "I felt like I was being interrogated."
+    izuna "Exactly!"
+    john "...Alright. So do we just wait until we arrive now?"
+    izuna "Yup."
+    john "...That's convenient."
+
+    scene black with wiperadial_horiz
+    pause 1
+    scene xmasST_bg wagon 2
+    show izuna a_6:
+        centerleft
+        faceright
+        ypos 1.15
+    show kiyoshi b_5:
+        center
+        faceright
+        ypos 1.15
+    show john b_1:
+        centerright
+        faceright
+        ypos 1.15
+    with wiperadial_vert
+    john "So... I've been meaning to ask..."
+
+    show john at faceleft
+    john "Why is it called the {q}Bipolar Express{/q}?"
+
+    show izuna a_4
+    izuna "That's because..."
+
+    show izuna a_9
+    izuna "..."
+
+    show izuna a_8
+    izuna "Because it has a bipolar disorder."
+
+    show john b_7
+    john "...Are you sure?"
+    izuna "...Yes?"
+
+    show john at faceright
+    john "{i}Sigh...{/i} Alright."
+
+    show john b_11
+    show kiyoshi b_10
+    show izuna a_1
+    xmasST_misha "Passengers, attach your seatbelts."
+    "I already had mine strapped on as I wasn't going anywhere, but shortly after the announcement over the speakers, the train started to slow down."
+
+    show john at faceleft
+    kiyoshi "The train is stopping?"
+    john "It would seem so."
+
+    show john at faceright
+    "Eventually it came to a complete stop."
+    xmasST_misha "...You wait in seats until I am done fixing problem. We going soon again."
+
+    show izuna a_8
+    show john at faceleft
+    show kiyoshi at faceleft
+    izuna "Mmhh, it's rare for the trains to be late from what I've heard."
+
+    show izuna a_6
+    izuna "I'm sure everything will be alright."
+    "She said that, but..."
+
+    scene xmasST_bg wagon 2
+    show izuna a_0:
+        centerleft
+        faceright
+        ypos 1.15
+        xpos 0.45
+    show kiyoshi b_13:
+        left
+        faceleft
+    show john b_7:
+        centerright
+        faceright
+        ypos 1.15
+    with wipecircle
+    "A few minutes quickly became 20 minutes..."
+
+    scene xmasST_bg wagon 2
+    show izuna a_2:
+        centerright
+        faceright
+        ypos 1.15
+    show kiyoshi b_16:
+        centerleft
+        faceleft
+    show john b_10:
+        left
+        faceright
+    with wipecircle
+    "20 minutes quickly became 40..."
+
+    scene xmasST_bg wagon 2
+    show izuna a_5:
+        centerleft
+        faceleft
+        ypos 1.15
+    show kiyoshi b_12:
+        centerright
+        faceleft
+    show john b_11:
+        right
+        faceleft
+    with wipecircle
+    "And eventually, even 40 minutes became 1 hour and 30 minutes..."
+
+    show izuna at faceright
+    john "Hey, Izuna, how long is this really going to take?"
+
+    show izuna a_2
+    izuna "Sigh... I don't know."
+    john "Is it okay if we go check what's actually wrong?"
+    izuna "Yeah, yeah, I'll just wait here then..."
+    think "Talk about a downer."
+
+    scene xmasST_bg wagon 1
+    show xmasST_misha a_5 at centerright, faceright
+    show john b_8 at centerleft, faceright
+    show kiyoshi b_10 at left, faceright
+    with wipeblinds_horiz
+    "The wagon right next to ours was the main control center for this train, which looked way too advanced for the task it was supposed to perform."
+    "We found Misha, quite frustrated in here."
+    john "Uhm, hey..."
+
+    show xmasST_misha a_4 at faceleft
+    xmasST_misha "What do little girls want? I am fixing problem. Go away."
+    john "Is there anything we could help with to fix the problem maybe?"
+    kiyoshi "I know a few things about trains personally."
+
+    show xmasST_misha a_7
+    xmasST_misha "Ugh, little girls care too much. But yes. Could need little help."
+    xmasST_misha "I have lost important key to important box for getting snow off rails. I have searched all over control center, but find nothing."
+    xmasST_misha "Maybe somebody stole key from control center. Maybe. So need somebody to check all cabins."
+
+    show xmasST_misha a_2
+    xmasST_misha "Tall girl with anorexia stay, want to push her into airlock to check if key in there."
+
+    show kiyoshi a_2
+    kiyoshi "You want to shove me into what-now?!"
+
+    show xmasST_misha a_4
+    xmasST_misha "No complaining. Weak girl, go look for key and ask other passengers if they know where key is."
+
+    show john b_2
+    john "Okay, I'll do that."
+
+    play sound xmasST_sfx_new_room
+    show john a_1 at offscreenleft with ease
+    show kiyoshi at faceleft
+    kiyoshi "No, wait, W-girl! Don't leave me here with her!"
+
+    play music xmasST_bgm_holiday_weasel fadeout 1 fadein 1.5
+    $ gui.textbox_yalign = 0.03
+    scene xmasST_bg wagon 2
+    with wipecircle
+    "As you enter the cabin you previously were in, you can feel something changing."
+    "All of a sudden, this has turned into a point-and-click adventure with you in first person."
+
+label xmasST_tutorial_1:
+    show screen item_search_tutorial_1 with dissolve
+    "With this newborn resolve and change of perspective, you get the urge to click on Izuna to talk with her."
+    "I said, we will now click on Izuna."
+    "..."
+    "Click on her."
+    "If you don't want to click on her out of consideration, then click in the general vicinity of her."
+    "Okay now listen here you little shit, you click on her whether you like it or not, the next one is going to be a loop that you can't stop looping in so enjoy your endless torture and misaligned textboxes."
+
+label xmasST_tutorial_screw_you:
+    "CLICK ON HER."
+    jump xmasST_tutorial_screw_you
+
+label xmasST_tutorial_2:
+    scene xmasST_bg wagon 2
+    show xmasST_asset overlay1
+    show izuna a_6 at centerleft, faceright
+    show john b_1 at centerright, faceleft
+    with dissolve
+    izuna "Oh John, did everything turn out alright?"
+    john "Sadly not, she needs some sort of key. Do you know where I could find it or how it looks?"
+    show izuna a_0
+    izuna "A key? Nope, sorry."
+    show izuna a_6
+    izuna "But do you want to know what I {i}did{/i} find?"
+
+    scene xmasST_bg wagon 2
+    show izuna a_6 at left, faceright
+    show xmasST_asset overlay2:
+        zoom 1.15
+        yalign 0.6
+        xalign 0.4
+    show screen item_search_tutorial_2
+    with dissolve
+    izuna "Tadah!"
+    izuna "I managed to find a coin and made it balance on the seat!"
+    izuna "How neat is that?"
+    john "..."
+    john "I'll take it."
+    show izuna a_2
+    izuna "Aww..."
+
+label xmasST_tutorial_take_it:
+    "I took the coin."
+    jump xmasST_tutorial_take_it
+
+label xmasST_tutorial_3:
+    hide xmasST_asset overlay2 with dissolve
+    $ coin = True
+    if coin == True:
+        show xmasST_asset coin:
+            center
+            xpos 0.95
+            ypos 1.0
+        with dissolve
+    "You added the coin to your inventory."
+    show izuna a_6
+    izuna "Oh yeah, John, make sure you go look in the cabins behind us too, right?"
+    john "But there is a wall. There only are two cabins."
+    izuna "That's just another magic wall. You can walk right through it."
+    john "...Right, I'll keep that in mind."
+    $ xmasST_rng_bool = False
+    $ xmasST_natsumi_game_completed = False
+    $ xmasST_natsumi_spoken = False
+    $ tea = False
+    $ xmasST_rayne_spoken = False
+    $ xmasST_rayne_coin = False
+    $ xmasST_bear_move = False
+    $ key = False
+    $ stick = False
+    $ kiyoshi_ = False
+    $ kiyoshi_activated = False
+    $ kiyoshi_activated_talked = False
+    jump xmasST_wagon_2
 
 
 
 
+label xmasST_wagon_1:
+    scene xmasST_bg wagon 1
+    show screen item_search_wagon_1
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    with wipecircle
+
+    menu:
+        "Where would you like to go?"
+        "Cabin 2":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_1
+            with wipecircle
+            jump xmasST_wagon_2_sleep
 
 
-    placeholder
-    return
+label xmasST_wagon_2_sleep:
+    $ xmasST_rng = renpy.random.randint(0, 2)
+    if xmasST_rng == 0:
+        $ xmasST_rng_bool = True
+        scene xmasST_bg wagon 2
+        show izuna a_10:
+            transform_anchor True
+            rotate 90
+            left
+            faceleft
+            ypos 0.9
+            xpos 0.0
+        if coin == True:
+            show xmasST_asset coin as coin:
+                center
+                xpos 0.95
+                ypos 1.0
+        if tea == True:
+            show xmasST_asset teacup as teacup:
+                center
+                xpos 0.885
+                ypos 1.0
+        if stick == True:
+            show xmasST_asset stick inv as stick:
+                center
+                xpos 0.825
+                ypos 1.0
+        if key == True:
+            show xmasST_asset key as key:
+                center
+                xpos 0.78
+                ypos 1.0
+        with wipecircle
+        menu:
+            "Where would you like to go?"
+            "Cabin 1":
+                play sound xmasST_sfx_new_room
+                scene black
+                hide screen item_search_wagon_2
+                with wipecircle
+                jump xmasST_wagon_1
+            "Cabin 3":
+                play sound xmasST_sfx_new_room
+                scene black
+                hide screen item_search_wagon_2
+                with wipecircle
+                jump xmasST_wagon_3
+    else:
+        jump xmasST_wagon_2
+
+label xmasST_wagon_2:
+    if xmasST_rng_bool:
+        jump xmasST_wagon_2_sleep
+    scene xmasST_bg wagon 2
+    show screen item_search_wagon_2
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    with wipecircle
+
+    menu:
+        "Where would you like to go?"
+        "Cabin 1":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_2
+            with wipecircle
+            jump xmasST_wagon_1
+        "Cabin 3":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_2
+            with wipecircle
+            jump xmasST_wagon_3
+
+
+label xmasST_wagon_3:
+    scene xmasST_bg wagon 3
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    show screen item_search_wagon_3
+    with wipecircle
+
+    menu:
+        "Where would you like to go?"
+        "Cabin 2":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_3
+            with wipecircle
+            jump xmasST_wagon_2_sleep
+        "Cabin 4":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_3
+            with wipecircle
+            jump xmasST_wagon_4
+
+label xmasST_wagon_4:
+    scene xmasST_bg wagon 4
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    show screen item_search_wagon_4
+    with wipecircle
+
+    menu:
+        "Where would you like to go?"
+        "Cabin 3":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_4
+            with wipecircle
+            jump xmasST_wagon_3
+        "Cabin 5":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_4
+            with wipecircle
+            jump xmasST_wagon_5
+
+label xmasST_wagon_5:
+    scene xmasST_bg wagon 5
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    if xmasST_bear_move == False:
+        show screen item_search_wagon_5_1
+    else:
+        show screen item_search_wagon_5_2
+    with wipecircle
+
+    menu:
+        "Where would you like to go?"
+        "Cabin 4":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_5_1
+            hide screen item_search_wagon_5_2
+            with wipecircle
+            jump xmasST_wagon_4
+        "Cabin 6":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_5_1
+            hide screen item_search_wagon_5_2
+            with wipecircle
+            jump xmasST_wagon_6
+
+label xmasST_wagon_6:
+    scene xmasST_bg wagon 6
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    if stick == False:
+        show screen item_search_wagon_6
+    with wipecircle
+
+    menu:
+        "Where would you like to go?"
+        "Cabin 5":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_6
+            with wipecircle
+            jump xmasST_wagon_5
+
+label xmasST_wagon_trapdoor:
+    scene xmasST_bg wagon trapdoor
+    if coin == True:
+        show xmasST_asset coin as coin:
+            center
+            xpos 0.95
+            ypos 1.0
+    if tea == True:
+        show xmasST_asset teacup as teacup:
+            center
+            xpos 0.885
+            ypos 1.0
+    if stick == True:
+        show xmasST_asset stick inv as stick:
+            center
+            xpos 0.825
+            ypos 1.0
+    if key == True:
+        show xmasST_asset key as key:
+            center
+            xpos 0.78
+            ypos 1.0
+    if key == False:
+        show screen item_search_wagon_trapdoor
+    with wipecircle
+    menu:
+        "Where would you like to go?"
+        "Cabin 5":
+            play sound xmasST_sfx_new_room
+            scene black
+            hide screen item_search_wagon_trapdoor
+            with wipecircle
+            jump xmasST_wagon_5
+
+label xmasST_izuna:
+    show xmasST_bg wagon 2
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show izuna a_6 at centerleft, faceright
+    show john a_1 at centerright, faceleft
+    with dissolve
+    izuna "Anything new?"
+    john "Nope. We're not moving yet."
+    izuna "I see. Be sure to tell me if we're starting to churn towards the north pole again, I'm really starting to starve, you know."
+    jump xmasST_wagon_2
+
+label xmasST_misha:
+    if key == True:
+        jump xmasST_chapter_2_finale
+    show xmasST_bg wagon 1
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_7 at centerright, faceleft
+    show xmasST_misha a_3 at centerleft, faceright
+    with dissolve
+    xmasST_misha "You have my key?"
+    john "Not yet. Do you have any other idea of where it could be?"
+    xmasST_misha "Hmm..."
+    xmasST_misha "Perhaps you should ask Bear in cabin 5. He is train mechanic. Best guess."
+    john "Alright, I'll ask him."
+    jump xmasST_wagon_1
+
+label xmasST_kiyoshi:
+    show xmasST_bg wagon 1
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_1 at centerright, faceleft
+    show kiyoshi a_10 at centerleft, faceright
+    with dissolve
+    if key == True:
+        kiyoshi "C'mon W-girl, give her that thing so I don't have to listen to her anymore. I like women, but not like this."
+        jump xmasST_wagon_1
+    else:
+        if kiyoshi_activated == False:
+            john "Everything alright there?"
+            kiyoshi "If I am alright? She just stuck me up into the air vents. Everything is going {i}just fine{/i}."
+            john "Is that a no?"
+            show kiyoshi b_13
+            kiyoshi "I am not one for sarcasm, but even I can crack one in this situation."
+            kiyoshi "Just hurry up and find that stupid key so we can go look for my spaceship."
+            jump xmasST_wagon_1
+        else:
+            if kiyoshi_activated_talked == False:
+                $ kiyoshi_ = True
+                $ kiyoshi_activated_talked = True
+                john "Hey Kiyoshi, you're tall, right?"
+                kiyoshi "I sure am."
+                john "I think I found the right key, but I can't reach it. Want to come with?"
+                show kiyoshi b_18
+                kiyoshi "You found it?! Thank goodness!"
+                show kiyoshi b_13
+                kiyoshi "Having to listen one more word to this crazy communist will make my head explode in even bits."
+                show kiyoshi b_18
+                kiyoshi "Lead the way, W-girl."
+                jump xmasST_wagon_1
+            else:
+                kiyoshi "Lead the way, W-girl."
+                jump xmasST_wagon_1
+
+label xmasST_natsumi:
+    outfit natsumi formal
+    show xmasST_bg wagon 3
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_17 at centerright, faceleft
+    show natsumi a_9 at centerleft, faceright
+    with dissolve
+    if xmasST_natsumi_game_completed == False:
+        if xmasST_natsumi_spoken == False:
+            $ xmasST_natsumi_spoken = True
+            john "Natsumi? What are you doing here?"
+            natsumi "Heya John. Or Willow."
+            natsumi "I am visiting my friend."
+            john "Your friend?"
+            natsumi "Yup."
+            john "What sort of friend do you have exactly? How did you even get on the train?"
+            show natsumi a_0
+            natsumi "Haven't you heard of my tea parties? I told mommy about them but she never takes me seriously."
+            natsumi "My friend is a nice Ice Witch who lives in a forest nearby. But this train is soooo slow."
+            show natsumi a_9
+            natsumi "Hey John. Or Willow. Do you want to play a game?"
+            show john b_11
+            john "I'm really in a hurry right now."
+            natsumi "Let's say you win a cup of my tea if you win!"
+            show natsumi a_8
+            natsumi "My tea is very delicious, I bet it would warm up anyone who tried it!"
+            show natsumi a_9
+        else:
+            natsumi "Hey John. Or Willow. Do you want to play?"
+        menu:
+            "Do you want to play Natsumi's game?"
+            "Let's try":
+                jump xmasST_natsumi_game_1
+            "Not right now":
+                natsumi "Okay. See you later."
+                jump xmasST_wagon_3
+    else:
+        natsumi "Hey John. Or Willow. Good luck doing what you're doing!"
+        john "Thanks."
+        jump xmasST_wagon_3
+
+label xmasST_natsumi_game_1:
+    natsumi "Alright! You just have to answer all the questions right!"
+    natsumi "Ready?"
+    menu:
+        natsumi "What is the name of the town we live in?"
+        "Tina Koya":
+            jump xmasST_natsumi_wrong
+        "San Fransokyo":
+            jump xmasST_natsumi_game_2
+        "Izunaville":
+            jump xmasST_natsumi_wrong
+
+label xmasST_natsumi_game_2:
+    show natsumi a_8
+    natsumi "Yey!"
+    show natsumi a_9
+    natsumi "Okay, next question!"
+    menu:
+        natsumi "What is Sadie-Lynn's last name? No google!"
+        "Kobayashi":
+            jump xmasST_natsumi_game_3
+        "Grandales":
+            jump xmasST_natsumi_wrong
+        "Otani":
+            jump xmasST_natsumi_wrong
+
+label xmasST_natsumi_game_3:
+    show natsumi a_8
+    natsumi "Yey! You got that right too!"
+    show natsumi a_9
+    john "Who even is that? That was a pure guess."
+    natsumi "That's not important. Final question!"
+    menu:
+        natsumi "How many students are officially known to be in the Student Council of Tina Koya High?"
+        "Two":
+            jump xmasST_natsumi_wrong
+        "Three":
+            jump xmasST_natsumi_game_4
+        "Four":
+            jump xmasST_natsumi_wrong
+
+label xmasST_natsumi_game_4:
+    $ xmasST_natsumi_game_completed = True
+    show natsumi a_8
+    natsumi "You did it!"
+    show natsumi a_9
+    natsumi "You really earned this tea. Congratulations!"
+    $ tea = True
+    show xmasST_asset teacup:
+        center
+        xpos 0.885
+        ypos 1.0
+    with dissolve
+    "You added tea to your inventory."
+    natsumi "You can enjoy it yourself or give it to someone else. Good luck doing what you're doing!"
+    jump xmasST_wagon_3
+
+label xmasST_natsumi_wrong:
+    show natsumi a_5
+    natsumi "That's not right at all."
+    natsumi "You're a big stinky, you don't even know that."
+    show natsumi a_0
+    natsumi "Go practice and try my super duper quiz again!"
+    jump xmasST_wagon_3
+
+label xmasST_rayne:
+    outfit xmasST_rayne dress
+    show xmasST_bg wagon 4
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_6 at centerright, faceleft
+    show xmasST_rayne a_17 at centerleft, faceright
+    with dissolve
+    if xmasST_rayne_coin == False:
+        if xmasST_rayne_spoken == False:
+            $ xmasST_rayne_spoken = True
+            xmasST_rayne "Oh! Oho! If it isn't the one whose name I cannot remember!"
+            john "Oh, it's just {i}you{/i}."
+            show xmasST_rayne c_13
+            xmasST_rayne "Did you perhaps learn anything since last we met about animals and their worth in life?"
+            john "Are you just the dedicated vegan of this place?"
+            xmasST_rayne "Naturally!"
+            show xmasST_rayne a_5
+            xmasST_rayne "Could there be a possibility that you know why the train has stopped?"
+            john "The conductor needs a key to get into some sort of box, until then we won't be moving."
+            xmasST_rayne "Ah. What a shame."
+            show xmasST_rayne b_4
+            xmasST_rayne "I always knew that vehicles running on fossil fuel are grossly inadequate."
+            show xmasST_rayne c_13
+            xmasST_rayne "No matter. For a donation towards the P.E.T.A. foundation, which is short for Pet Every Tiger Around, I {i}could{/i} grant you a bit of information."
+            john "Aren't you just as stuck as I am here?"
+            xmasST_rayne "Let's just say it's not for personal profit."
+            if coin == True:
+                menu:
+                    "Give her a coin?"
+                    "Yes":
+                        $ coin = False
+                        $ xmasST_rayne_coin = True
+                        show xmasST_rayne b_24
+                        "Rayne has taken your coin."
+                        xmasST_rayne "Thank you very much!"
+                        show xmasST_rayne b_19
+                        xmasST_rayne "In the very back of the train you will find something useful. Telling you will make you aware, but you might need it."
+                        john "How do you know that?"
+                        show xmasST_rayne c_14
+                        xmasST_rayne "Let's just call it convenient magic!"
+                        jump xmasST_wagon_4
+                    "No":
+                        xmasST_rayne "Ah well. You will likely succeed either way. Good luck!"
+                        jump xmasST_wagon_4
+
+            else:
+                john "I don't have any money on me."
+                xmasST_rayne "What a shame. Nonetheless, I am sure you will succeed either way. Good luck!"
+                jump xmasST_wagon_4
+        else:
+            xmasST_rayne "How about it? Would you like to donate for information?"
+            if coin == True:
+                menu:
+                    "Give her a coin?"
+                    "Yes":
+                        $ coin = False
+                        show xmasST_rayne b_24
+                        "Rayne has taken your coin."
+                        xmasST_rayne "Thank you very much!"
+                        show xmasST_rayne b_19
+                        xmasST_rayne "In the very back of the train you will find something useful. Telling you will make you aware, but you might need it."
+                        john "How do you know that?"
+                        show xmasST_rayne c_14
+                        xmasST_rayne "Let's just call it convenient magic!"
+                        jump xmasST_wagon_4
+                    "No":
+                        xmasST_rayne "Ah well. You will likely succeed either way. Good luck!"
+                        jump xmasST_wagon_4
+
+            else:
+                john "I don't have any money on me."
+                xmasST_rayne "What a shame. Nonetheless, I am sure you will succeed either way. Good luck!"
+                jump xmasST_wagon_4
+    else:
+        xmasST_rayne "Thanks for the donation again! Make sure to check the very back of the train!"
+        jump xmasST_wagon_4
+
+label xmasST_johnGB:
+    $ johnGB.name = "Jane"
+    outfit johnGB casual
+    show xmasST_bg wagon 4
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_1 at centerright, faceleft
+    show johnGB a_4 at centerleft, faceright
+    with dissolve
+    john "Hey there. Would you perhaps know of a key somebody lost around here?"
+    johnGB "A key? I'm afraid not. Is that why the train isn't moving?"
+    john "Yeah. By the way, you look really familiar."
+    johnGB "I had the exact same thought just now. Guess we met before?"
+    john "That's likely. Anyways, I need to be off."
+    johnGB "Good luck finding it."
+    jump xmasST_wagon_4
+
+label xmasST_bear:
+    show xmasST_bg wagon 5
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_4 at centerright, faceleft
+    show xmasST_asset bear at centerleft
+    with dissolve
+    "The bear-like creature is looking at you with an intense stare."
+    "A soul-piercing stare penetrates your very body, eagerly awaiting for a command or action."
+    menu:
+        "What would you like to do?"
+        "Leave with post-haste":
+            jump xmasST_wagon_5
+        "Give the bear a coin" if coin == True:
+            $ coin = False
+            "You give the bear a coin."
+            "And..."
+            "It still stands there. It licks it's lips as if they were dry."
+            jump xmasST_wagon_5
+        "Give the bear some tea" if tea == True:
+            $ tea = False
+            $ xmasST_bear_move = True
+            "The bear sips the tea."
+            "It lets out a silent growl of pleasure and starts moving and working again."
+            "You spot a very out-of-place trapdoor that might be interesting."
+            jump xmasST_wagon_5
+
+label xmasST_bear_2:
+    show xmasST_bg wagon 5
+    show xmasST_asset overlay1:
+        xalign 0.5
+    show john b_4 at centerright, faceleft
+    show xmasST_asset bear at centerleft
+    with dissolve
+    "The bear scoffs at your presence."
+    "It loathes being in close proximity of your filthy human skin."
+    "It judges by tossing it's many coins into the air, as if you were a mere peasant."
+    "You feel the air tensening around you."
+    "This feeling is the game turning from a point-and-click-visual-novel game, to an RPG game where you are meant to slay this bear."
+    "Any moment now, a boss health meter will appear on screen."
+    "But before that can happen, it decides to stop looking at you, freeing you from the grasp of it's sight and the could-have-been boss battle with the beast."
+    jump xmasST_wagon_5
+
+label xmasST_key:
+    if kiyoshi_ == True:
+        scene xmasST_bg wagon trapdoor
+        show john b_9 at centerleft, faceright
+        show kiyoshi b_10 at centerright, faceright
+        show xmasST_asset key:
+            xpos 0.87
+            ypos 0.1
+        with dissolve
+        kiyoshi "It's up there?"
+        show kiyoshi b_1
+        kiyoshi "Child's play, I say."
+        $ key = True
+        show xmasST_asset key:
+            center
+            xpos 0.78
+            ypos 1.0
+        with dissolve
+        "You got the key. Report back to Misha with it when you're ready."
+        show kiyoshi at faceleft
+        kiyoshi "There we go. I'll go back to the control center, I'll meet you there, W-girl."
+        john "Yeah, thanks for the help."
+        kiyoshi "Always, W-girl, always."
+        jump xmasST_wagon_trapdoor
+    if stick == True:
+        $ key = True
+        show xmasST_asset key:
+            center
+            xpos 0.78
+            ypos 1.0
+        with dissolve
+        "You used the key and managed to bring it down fromt he shelves. You actually wonder how the hell you couldn't get the key in the first place, but that's an afterthought now that you have it in your hands."
+        "You got the key. Report back to Misha with it when you're ready."
+        jump xmasST_wagon_trapdoor
+    else:
+        $ kiyoshi_activated = True
+        show screen item_search_wagon_trapdoor
+        "You found the key, but it is too far up."
+        "You need to figure out a way to get it from that height or have someone help you."
+        jump xmasST_wagon_trapdoor
+
+label xmasST_stick:
+    $ stick = True
+    show xmasST_asset stick inv:
+        center
+        xpos 0.825
+        ypos 1.0
+    "You borrowed a stick, which is very hard to see in the inventory, but believe the narrator on this, the stick is clearly there if you squint your eyes."
+    "It is good luck to carry a hockey stick around in Canada, so maybe it is here too."
+    jump xmasST_wagon_6
+
+
+
+    screen item_search_tutorial_1:
+        modal False
+        imagebutton:
+            ypos 0.3
+            idle direct_path("xmasST_asset click izuna")
+            hover direct_path("xmasST_asset click izuna")
+            action [Hide("item_search_tutorial_1"), Jump("xmasST_tutorial_2")]
+
+    screen item_search_tutorial_2:
+        modal False
+        imagebutton:
+            xpos 0.668 ypos 0.552
+            idle direct_path("xmasST_asset coin")
+            hover direct_path("xmasST_asset coin hover")
+            action [Hide("item_search_tutorial_2"), Jump("xmasST_tutorial_3")]
+
+    screen item_search_wagon_1:
+        modal False
+        imagebutton:
+            ypos 0.2
+            xpos 0.4
+            idle direct_path("xmasST_asset click misha")
+            hover direct_path("xmasST_asset click misha")
+            action [Hide("item_search_wagon_1"), Jump("xmasST_misha")]
+        imagebutton:
+            xpos 0.65
+            ypos 0.2
+            idle direct_path("xmasST_asset click kiyoshi")
+            hover direct_path("xmasST_asset click kiyoshi")
+            action [Hide("item_search_wagon_1"), Jump("xmasST_kiyoshi")]
+
+    screen item_search_wagon_2:
+        modal False
+        imagebutton:
+            ypos 0.3
+            idle direct_path("xmasST_asset click izuna")
+            hover direct_path("xmasST_asset click izuna")
+            action [Hide("item_search_wagon_2"), Jump("xmasST_izuna")]
+
+    screen item_search_wagon_3:
+        modal False
+        imagebutton:
+            xpos 0.65
+            ypos 0.42
+            idle direct_path("xmasST_asset click natsumi")
+            hover direct_path("xmasST_asset click natsumi")
+            action [Hide("item_search_wagon_3"), Jump("xmasST_natsumi")]
+
+    screen item_search_wagon_4:
+        modal False
+        imagebutton:
+            xpos 0.65
+            ypos 0.42
+            idle direct_path("xmasST_asset click rayne")
+            hover direct_path("xmasST_asset click rayne")
+            action [Hide("item_search_wagon_4"), Jump("xmasST_rayne")]
+        imagebutton:
+            xpos 0.075
+            ypos 0.42
+            idle direct_path("xmasST_asset click johnGB")
+            hover direct_path("xmasST_asset click johnGB")
+            action [Hide("item_search_wagon_4"), Jump("xmasST_johnGB")]
+
+    screen item_search_wagon_5_1:
+        modal False
+        imagebutton:
+            xpos 0.15
+            ypos 0.42
+            idle direct_path("xmasST_asset click bear")
+            hover direct_path("xmasST_asset click bear")
+            action [Hide("item_search_wagon_5_1"), Jump("xmasST_bear")]
+
+    screen item_search_wagon_5_2:
+        modal False
+        imagebutton:
+            xpos 0.25
+            ypos 0.75
+            idle direct_path("xmasST_asset trapdoor")
+            hover direct_path("xmasST_asset trapdoor hover")
+            action [Hide("item_search_wagon_5_2"), Jump("xmasST_wagon_trapdoor")]
+        imagebutton:
+            xpos 0.65
+            ypos 0.42
+            idle direct_path("xmasST_asset click bear")
+            hover direct_path("xmasST_asset click bear")
+            action [Hide("item_search_wagon_5_2"), Jump("xmasST_bear_2")]
+
+    screen item_search_wagon_6:
+        modal False
+        imagebutton:
+            xpos 0.065
+            ypos 0.2
+            idle direct_path("xmasST_asset stick")
+            hover direct_path("xmasST_asset stick hover")
+            action [Hide("item_search_wagon_6"), Jump("xmasST_stick")]
+
+    screen item_search_wagon_trapdoor:
+        imagebutton:
+            xpos 0.865
+            ypos 0.1
+            idle direct_path("xmasST_asset key")
+            hover direct_path("xmasST_asset key hover")
+            action [Hide("item_search_wagon_trapdoor"), Jump("xmasST_key")]
+
+label xmasST_chapter_2_finale:
+    $ gui.textbox_yalign = 1.0
+    play music xmasST_bgm_we_wish_you fadein 1.5 fadeout 1
+    scene black with wipeblinds_horiz
+    pause 2
+    scene xmasST_bg wagon 1
+    show john b_1 at centerleft, faceright
+    show kiyoshi b_23 at left, faceright
+    show xmasST_misha a_9 at centerright, faceleft
+    with wipeblinds_horiz
+    xmasST_misha "You found my key then?"
+    john "Yeah, here you go."
+
+    show xmasST_misha b_0
+    xmasST_misha "Very good. You are not so little girls after all. You are dependable girls then."
+    xmasST_misha "I will make sure you get pocket change when we arrive."
+    kiyoshi "It better be at least a 100 dollars."
+
+    show xmasST_misha a_5
+    xmasST_misha "Do not get content, tall girl."
+
+    show kiyoshi a_8
+    kiyoshi "{i}Eek!{/i} Sorry!"
+
+    scene xmasST_bg winter 1
+    show izuna a_5 at center, faceleft
+    show john a_12 at centerright, faceleft
+    show kiyoshi a_23 at centerleft, faceright
+    with sawleft
+    "We finally arrived after a very extended train-trip."
+    "What awaited us wasn't exactly what I had thought at first though."
+    john "So, where now? I'm freezing to death here."
+    izuna "..."
+
+    show john b_7
+    john "Hello?"
+
+    show izuna a_1 at faceright
+    izuna "Oh! Right! I, uh... Am not familiar with where the trainstation is on the North Pole, so I just need to look around a bit to make sure I know where we are."
+    john "...Are you sure you have everything under control?"
+
+    show izuna a_4
+    izuna "Of course, of course!"
+
+    scene xmasST_bg winter 2
+    show izuna a_5 at center, faceright
+    show john b_10 at centerleft, faceright
+    show kiyoshi b_12 at left, faceright
+    with wiperadial_horiz
+    izuna "This is... A town?"
+    john "For real, do you have any idea where we are or do we have to ask a local?"
+
+    show izuna a_2 at faceleft
+    izuna "I... Guess we could ask a local..."
+    john "Great. Hey! Excuse me?!"
+
+    show yoshinori a_0 at right, faceleft with dissolve
+    show izuna a_1 at faceright
+    $ yoshinori.name = "Elderly Man"
+    "I saw an elderly man walking past in a hurry, so we could as well ask."
+    yoshinori "Yes?"
+    john "Can you tell us where exactly we are in this world?"
+
+    show yoshinori a_1
+    yoshinori "Where we are? What a curious question."
+    yoshinori "This is Winter's City."
+
+    show izuna a_0
+    izuna "Wait, isn't Winter's City a town in the South Pole...?"
+
+    show john b_5
+    show kiyoshi b_8
+    show yoshinori a_0
+    john "What?!"
+    kiyoshi "South Pole?!"
+    yoshinori "Why yes of course it is. Did you expect the North Pole perhaps?"
+
+    show yoshinori a_2 at offscreenright, faceright with ease
+    yoshinori "Ahahah, kids these days, I tell you!"
+
+    show izuna a_6 at faceleft
+    izuna "Uhm..."
+    izuna "Oops?"
+
+    scene black with dissolve
+    pause 1
+    "That moment I understood that the Polar Express goes to the North Pole, while the Bipolar Express goes to the South Pole."
+    "Well, I guess everyone makes mistakes."
+    "Except Izuna. She makes huge fuck-ups."
+
+    gameover "Merry Christmas v2!"
+
+    jump xmasST_chapter_select

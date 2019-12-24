@@ -1,0 +1,16 @@
+{
+    "display_name": "Misha",
+    "name_color": "#fff29d",
+    "scale": 0.9,
+    "voice": "deep",
+    "default_outfit": "uniform",
+    "eye_line": 0.0,
+	"poses": {
+        "a": {
+            "center_width": 226
+        },
+        "b": {
+            "center_width": 226
+		}
+	}
+}
